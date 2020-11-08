@@ -12,14 +12,15 @@ From the data structure point of view, following are some important categories o
 - <b>Update</b> − Algorithm to update an existing item in a data structure.
 - <b>Delete</b> − Algorithm to delete an existing item from a data structure.
 
-#### Analysis of Algorithm
+### Analysis of Algorithm
 
 Efficiency of an algorithm can be analyzed at two different stages, before implementation and after implementation. They are the following −
 
 - <b>A Priori Analysis</b> − This is a theoretical analysis of an algorithm. Efficiency of an algorithm is measured by assuming that all other factors, for example, processor speed, are constant and have no effect on the implementation.
 - <b>A Posterior Analysis</b> − This is an empirical analysis of an algorithm. The selected algorithm is implemented using programming language. This is then executed on target computer machine. In this analysis, actual statistics like running time and space required, are collected.
 
-# Asymptotic Analysis
+#### Asymptotic Analysis
+
 In Asymptotic Analysis, the performance of an algorithm is evaluated in terms of input size (we don’t measure the actual running time). We calculate, how the time (or space) taken by an algorithm increases with the input size.
 <br>
 There are three cases to analyze an algorithm: 
@@ -32,7 +33,7 @@ There are three cases to analyze an algorithm:
 - <b>Best Case Analysis </b> - In the best case analysis, we calculate lower bound on running time of an algorithm. We must know the case that causes minimum number of operations to be executed. In the linear search problem, the best case occurs when the element to be searched is present at the first location.ime complexity in the best case would be Θ(1).
 <br>
 
-# 3 asymptotic notations used to represent time complexity of algorithms:
+#### 3 asymptotic notations used to represent time complexity of algorithms:
 - <b>Θ Notation</b> - The theta notation bounds a functions from above and below, so it defines exact asymptotic behavior.
 
                Θ(g(n)) = {f(n): there exist positive constants c1, c2 and n0 such that 0 <= c1*g(n) <= f(n) <= c2*g(n) for all n >= n0}
