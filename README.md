@@ -35,19 +35,27 @@ There are three cases to analyze an algorithm:
 # 3 asymptotic notations used to represent time complexity of algorithms:
 - <b>Θ Notation</b> - The theta notation bounds a functions from above and below, so it defines exact asymptotic behavior.
 
-               <b>Θ(g(n)) = {f(n): there exist positive constants c1, c2 and n0 such that 0 <= c1*g(n) <= f(n) <= c2*g(n) for all n >= n0}</b>
+               Θ(g(n)) = {f(n): there exist positive constants c1, c2 and n0 such that 0 <= c1*g(n) <= f(n) <= c2*g(n) for all n >= n0}
   
- i.e if f(n) is theta of g(n), then the value f(n) is always between c1*g(n) and c2*g(n) for large values of n (n >= n0) and f(n) must be non-negative for values of n greater than n0. 
- <img src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-1.png">
+ i.e if f(n) is theta of g(n), then the value f(n) is always between c1*g(n) and c2*g(n) for large values of n (n >= n0) and f(n) must be non-negative for values of n greater than n0.
+ <div>
+  <p align="center">
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-1.png"></p>
+  
 - <b>Big O Notation</b> - The Big O notation defines an upper bound of an algorithm, it bounds a function only from above. 
 
-                <b>O(g(n)) = { f(n): there exist positive constants c and n0 such that 0 <= f(n) <= c*g(n) for all n >= n0}</b>
- <img align="center" src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-2.png">               
+                O(g(n)) = { f(n): there exist positive constants c and n0 such that 0 <= f(n) <= c*g(n) for all n >= n0}
+<div>
+  <p align="center">
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-2.png"> </p>
+  </div>
 
 - <b>Ω Notation</b> -  Ω notation provides an asymptotic lower bound.or a given function g(n), we denote by Ω(g(n)) the set of functions.
 
-                 <b>Ω (g(n)) = {f(n): there exist positive constants c and n0 such that 0 <= c*g(n) <= f(n) for all n >= n0}</b>
- <img align="center" src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-3.png">                
+                 Ω (g(n)) = {f(n): there exist positive constants c and n0 such that 0 <= c*g(n) <= f(n) for all n >= n0}
+ <div>
+  <p align="center">
+ <img align="center" src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-3.png"></p>                
 
 #### Space Complexity
 Space complexity of an algorithm represents the amount of memory space required by the algorithm in its life cycle. The space required by an algorithm is equal to the sum of the following two components −
