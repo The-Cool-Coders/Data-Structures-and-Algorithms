@@ -19,6 +19,36 @@ Efficiency of an algorithm can be analyzed at two different stages, before imple
 - <b>A Priori Analysis</b> − This is a theoretical analysis of an algorithm. Efficiency of an algorithm is measured by assuming that all other factors, for example, processor speed, are constant and have no effect on the implementation.
 - <b>A Posterior Analysis</b> − This is an empirical analysis of an algorithm. The selected algorithm is implemented using programming language. This is then executed on target computer machine. In this analysis, actual statistics like running time and space required, are collected.
 
+# Asymptotic Analysis
+In Asymptotic Analysis, the performance of an algorithm is evaluated in terms of input size (we don’t measure the actual running time). We calculate, how the time (or space) taken by an algorithm increases with the input size.
+<br>
+There are three cases to analyze an algorithm: 
+1) The Worst Case 
+2) Average Case 
+3) Best Case
+
+- <b>Worst case</b> - In the worst case analysis, we calculate upper bound on running time of an algorithm. We must know the case that causes maximum number of operations to be executed. For example in Linear Search, the worst case happens when the element to be searched is not present in the array. the worst case time complexity of linear search would be Θ(n).
+- <b>Average Case Analysis</b> - In average case analysis, we take all possible inputs and calculate computing time for all of the inputs. Sum all the calculated values and divide the sum by total number of inputs. For example in linear search problem, let us assume that all cases are uniformly distributed (including the case of the element to be searched not being present in array). So we sum all the cases and divide the sum by (n+1).
+- <b>Best Case Analysis </b> - In the best case analysis, we calculate lower bound on running time of an algorithm. We must know the case that causes minimum number of operations to be executed. In the linear search problem, the best case occurs when the element to be searched is present at the first location.ime complexity in the best case would be Θ(1).
+<br>
+
+# 3 asymptotic notations used to represent time complexity of algorithms:
+- <b>Θ Notation</b> - The theta notation bounds a functions from above and below, so it defines exact asymptotic behavior.
+
+               <b>Θ(g(n)) = {f(n): there exist positive constants c1, c2 and n0 such that 0 <= c1*g(n) <= f(n) <= c2*g(n) for all n >= n0}</b>
+  
+ i.e if f(n) is theta of g(n), then the value f(n) is always between c1*g(n) and c2*g(n) for large values of n (n >= n0) and f(n) must be non-negative for values of n greater than n0. 
+ <img src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-1.png">
+- <b>Big O Notation</b> - The Big O notation defines an upper bound of an algorithm, it bounds a function only from above. 
+
+                <b>O(g(n)) = { f(n): there exist positive constants c and n0 such that 0 <= f(n) <= c*g(n) for all n >= n0}</b>
+ <img align="center" src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-2.png">               
+
+- <b>Ω Notation</b> -  Ω notation provides an asymptotic lower bound.or a given function g(n), we denote by Ω(g(n)) the set of functions.
+
+                 <b>Ω (g(n)) = {f(n): there exist positive constants c and n0 such that 0 <= c*g(n) <= f(n) for all n >= n0}</b>
+ <img align="center" src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-3.png">                
+
 #### Space Complexity
 Space complexity of an algorithm represents the amount of memory space required by the algorithm in its life cycle. The space required by an algorithm is equal to the sum of the following two components −
 
