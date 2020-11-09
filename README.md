@@ -6,6 +6,7 @@ Algorithms and data structures are fundamental to efficient code and good softwa
 
 - [Data Structures & Algorithms Basics](https://github.com/The-Cool-Coders/Data-Structures-and-Algorithms#what-is-data-structure)
 - [Analysis of Algorithm](https://github.com/The-Cool-Coders/Data-Structures-and-Algorithms#analysis-of-algorithm)
+- [Greedy Algorithm]()
 
 ## What is Data Structure?
 
@@ -69,7 +70,7 @@ There are three cases to analyze an algorithm:
 ### 3 asymptotic notations used to represent time complexity of algorithms:
 - <b>Θ Notation</b> - The theta notation bounds a functions from above and below, so it defines exact asymptotic behavior.
 
-               Θ(g(n)) = {f(n): there exist positive constants c1, c2 and n0 such that 0 <= c1*g(n) <= f(n) <= c2*g(n) for all n >= n0}
+##### Θ(g(n)) = {f(n): there exist positive constants c1, c2 and n0 such that 0 <= c1*g(n) <= f(n) <= c2*g(n) for all n >= n0}
   
  i.e if f(n) is theta of g(n), then the value f(n) is always between c1*g(n) and c2*g(n) for large values of n (n >= n0) and f(n) must be non-negative for values of n greater than n0.
  <div>
@@ -78,7 +79,8 @@ There are three cases to analyze an algorithm:
   
 - <b>Big O Notation</b> - The Big O notation defines an upper bound of an algorithm, it bounds a function only from above. 
 
-                O(g(n)) = { f(n): there exist positive constants c and n0 such that 0 <= f(n) <= c*g(n) for all n >= n0}
+##### O(g(n)) = { f(n): there exist positive constants c and n0 such that 0 <= f(n) <= c*g(n) for all n >= n0}
+
 <div>
   <p align="center">
     <img src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-2.png"> </p>
@@ -86,9 +88,31 @@ There are three cases to analyze an algorithm:
 
 - <b>Ω Notation</b> -  Ω notation provides an asymptotic lower bound.or a given function g(n), we denote by Ω(g(n)) the set of functions.
 
-                 Ω (g(n)) = {f(n): there exist positive constants c and n0 such that 0 <= c*g(n) <= f(n) for all n >= n0}
+##### Ω (g(n)) = {f(n): there exist positive constants c and n0 such that 0 <= c*g(n) <= f(n) for all n >= n0}
+
  <div>
   <p align="center">
- <img align="center" src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-3.png"></p>                
+ <img align="center" src="https://media.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-3.png"></p>       
+  
+## Greedy Algorithms
+
+An algorithm is designed to achieve optimum solution for a given problem. In greedy algorithm approach, decisions are made from the given solution domain. As being greedy, the closest solution that seems to provide an optimum solution is chosen.
+
+Greedy algorithms try to find a localized optimum solution, which may eventually lead to globally optimized solutions. However, generally greedy algorithms do not provide globally optimized solutions.
+
+### Counting Coins
+
+This problem is to count to a desired value by choosing the least possible coins and the greedy approach forces the algorithm to pick the largest possible coin. If we are provided coins of ₹ 1, 2, 5 and 10 and we are asked to count ₹ 18 then the greedy procedure will be −
+
+- Select one ₹ 10 coin, the remaining count is 8
+- Then select one ₹ 5 coin, the remaining count is 3
+- Then select one ₹ 2 coin, the remaining count is 1
+- And finally, the selection of one ₹ 1 coins solves the problem
+
+Though, it seems to be working fine, for this count we need to pick only 4 coins. But if we slightly change the problem then the same approach may not be able to produce the same optimum result.
+
+For the currency system, where we have coins of 1, 7, 10 value, counting coins for value 18 will be absolutely optimum but for count like 15, it may use more coins than necessary. For example, the greedy approach will use 10 + 1 + 1 + 1 + 1 + 1, total 6 coins. Whereas the same problem could be solved by using only 3 coins (7 + 7 + 1)
+
+Hence, we may conclude that the greedy approach picks an immediate optimized solution and may fail where global optimization is a major concern.
 
 
